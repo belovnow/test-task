@@ -1,23 +1,25 @@
 {
     "name": "ASP.NET Core and React",
-    // Используем специализированный образ для .NET, который уже включает Node.js
     "image": "mcr.microsoft.com/devcontainers/dotnet:8.0-jammy",
 
+    "features": {
+        // Явно добавляем Node.js (LTS-версию) к нашему .NET-образу
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        }
+    },
+
     "forwardPorts": [
-        // Пробрасываем порты: 5001/5000 для .NET и 3000 для React
         5001,
         5000, 
         3000
     ],
 
-    // Действия после создания Codespace
-    // Устанавливаем зависимости для фронтенда и бэкенда
     "postCreateCommand": "dotnet restore backend/backend.csproj && npm install --prefix frontend",
 
     "customizations": {
         "vscode": {
             "extensions": [
-                // Рекомендуемые расширения для VS Code
                 "ms-dotnettools.csdevkit",
                 "dbaeumer.vscode-eslint"
             ]
