@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "V/e2AHN9o+A=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\belov\\Documents\\Development\\test-task\\backend\\backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\belov\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.4\\microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "C:\\Users\\belov\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
