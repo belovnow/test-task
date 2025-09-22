@@ -1,22 +1,17 @@
 {
     "name": "ASP.NET Core and React",
-    // Используем универсальный образ для разработки
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
-
-    "features": {
-        // Устанавливаем .NET SDK
-        "ghcr.io/devcontainers/features/dotnet:2": {},
-        // Устанавливаем Node.js
-        "ghcr.io/devcontainers/features/node:1": {}
-    },
+    // Используем специализированный образ для .NET, который уже включает Node.js
+    "image": "mcr.microsoft.com/devcontainers/dotnet:8.0-jammy",
 
     "forwardPorts": [
-        // Пробрасываем порты: 5001 для .NET и 3000 для React
-        5001, 
+        // Пробрасываем порты: 5001/5000 для .NET и 3000 для React
+        5001,
+        5000, 
         3000
     ],
 
     // Действия после создания Codespace
+    // Устанавливаем зависимости для фронтенда и бэкенда
     "postCreateCommand": "dotnet restore backend/backend.csproj && npm install --prefix frontend",
 
     "customizations": {
@@ -31,8 +26,11 @@
 
     "portsAttributes": {
         "5001": {
-            "label": "Backend (ASP.NET)",
+            "label": "Backend (HTTPS)",
             "onAutoForward": "openBrowser"
+        },
+        "5000": {
+            "label": "Backend (HTTP)"
         },
         "3000": {
             "label": "Frontend (React)",
