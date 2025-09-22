@@ -1,0 +1,64 @@
+# Общее для OS
+.DS_Store
+Thumbs.db
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# ===============
+# ASP.NET Core
+# ===============
+# Папки, генерируемые при сборке
+**/[Bb]in/
+**/[Oo]bj/
+
+# Пользовательские настройки Visual Studio и Rider
+*.user
+*.userossc
+*.suo
+.vs/
+.idea/
+
+# Файлы, генерируемые инструментами .NET
+tools/
+project.lock.json
+
+# Секреты и настройки для локальной разработки
+secrets.json
+appsettings.Development.json
+
+
+# ===============
+# Node.js / React
+# ===============
+# Зависимости
+node_modules/
+/frontend/node_modules/
+
+# Файлы логов
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Собранный проект (для Create React App - 'build', для Vite - 'dist')
+/frontend/build/
+/frontend/dist/
+
+# Переменные окружения. Игнорируем все, кроме шаблона.
+.env*
+!.env.example
+
+
+# =================
+# VS Code / Codespaces
+# =================
+# Игнорируем локальные настройки, но оставляем общие для команды
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Папка с данными Codespaces
+.codespaces/
