@@ -1,5 +1,6 @@
 ﻿using backend.Database;
 using backend.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Services;
 
