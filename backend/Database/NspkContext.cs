@@ -11,6 +11,7 @@ public class NspkContext : DbContext
     
     public NspkContext(DbContextOptions<NspkContext> options) : base(options)
     {
+        Database.EnsureDeleted();
         Database.EnsureCreated();
     }
 
