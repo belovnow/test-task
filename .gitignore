@@ -62,3 +62,6 @@ yarn-error.log*
 
 # Папка с данными Codespaces
 .codespaces/
+backend/Nspk.db
+backend/Nspk.db-shm
+backend/Nspk.db-wal
