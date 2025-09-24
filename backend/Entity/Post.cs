@@ -1,13 +1,16 @@
-﻿namespace backend.Entity;
+﻿using System;
 
-public class User : Entity<int>
+namespace backend.Entity;
+
+public class Post : Entity<int>
 {
-    public string Name { get; set; }
+    public string Title { get; set; }
     
-    public string Surname { get; set; }
+    public string Content { get; set; }
 
-    public string MiddleName { get; set; }
-
-    public DateOnly Birthdate { get; set; }
+    public DateTime CreatedDate { get; set; }
     
+    public int UserId { get; set; }
+    
+    public User User { get; set; }
 }
