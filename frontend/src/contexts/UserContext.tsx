@@ -8,6 +8,7 @@ interface UserContextType {
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useUser() {
     const context = useContext(UserContext);
     if (context === undefined) {
