@@ -1,9 +1,12 @@
 import './App.css'
+import { Layout } from './components/Layout'
 import { NewsFeed } from './pages/NewsFeed'
 
 function App() {
   return (
-    <NewsFeed />
+    <Layout>
+      <NewsFeed />
+    </Layout>
   )
 }
 
