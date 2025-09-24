@@ -1,8 +1,8 @@
 import { Layout as AntLayout, Spin, Typography } from "antd";
 import { ReactNode, useEffect, useState } from "react";
-import { apiClient } from "../api";
+import { userApi } from "../api/user";
 import { UserContext } from "../contexts/UserContext";
-import type { User } from "../types";
+import type { User } from "../types/user";
 
 const { Header, Content } = AntLayout;
 const { Title, Text } = Typography;
@@ -16,7 +16,7 @@ export function Layout({ children }: LayoutProps) {
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        apiClient.getUser()
+        userApi.getUser()
             .then((data) => setUser(data))
             .finally(() => setIsLoading(false));
     }, []);
